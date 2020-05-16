@@ -8,6 +8,14 @@ function addbuget() {
   } else {
     document.getElementById("upbug").innerHTML = bug;
     document.getElementById("upbug").style.color = "green";
+    bal = bug - netexp;
+    if (bal >= 0) {
+      document.getElementById("upbal").innerHTML = bal;
+      document.getElementById("upbal").style.color = "green";
+    } else {
+      document.getElementById("upbal").innerHTML = bal;
+      document.getElementById("upbal").style.color = "red";
+    }
   }
 }
 var netexp = 0;
