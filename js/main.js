@@ -27,6 +27,8 @@ function addexpense() {
     document.getElementById("upbal").style.color = "red";
   }
   updaterestable(info, exp);
+  document.getElementById("expinfo").value = "";
+  document.getElementById("expamt").value = "";
 }
 function updaterestable(info, exp) {
   var tb = document.getElementById("netres");
