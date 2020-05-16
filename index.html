@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+  </head>
+  <body>
+    <h2
+      style="
+        margin: auto;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      "
+    >
+      The Budget App
+    </h2>
+    <div id="cont1">
+      <div id="addbug">
+        <form>
+          <label for="">Enter your budget</label>
+          <input type="number" name="" id="budget" />
+          <button
+            type="button"
+            class="btn btn-success"
+            id="addb"
+            style="margin-top: 10px; margin-bottom: 10px;"
+          >
+            Add Budget
+          </button>
+        </form>
+      </div>
+      <div id="updatetable">
+        <table id="init">
+          <tr>
+            <td>Budget</td>
+            <td>Expense</td>
+            <td>Balance</td>
+          </tr>
+          <tr id="abc">
+            <td>$ <span id="upbug">0</span></td>
+            <td>$ <span id="upexp">0</span></td>
+            <td>$ <span id="upbal">0</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="cont2">
+      <div id="addexp">
+        <form>
+          <label for="">Expense Detail</label>
+          <input type="text" name="" id="expinfo" />
+          <label for="">Expense Amount</label>
+          <input type="number" name="" id="expamt" />
+          <button
+            type="button"
+            class="btn btn-danger"
+            id="adde"
+            style="margin-top: 10px; margin-bottom: 10px;"
+          >
+            Add Budget
+          </button>
+        </form>
+      </div>
+      <div id="result">
+        <table id="netres">
+          <tr>
+            <td>Details</td>
+            <td>Amount</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="./js/main.js"></script>
+</html>
