@@ -1,7 +1,9 @@
 document.querySelector("#addb").addEventListener("click", addbuget);
 document.querySelector("#adde").addEventListener("click", addexpense);
 var bug;
+var bl = false;
 function addbuget() {
+  bl = true;
   bug = document.getElementById("budget").value;
   if (bug == "") {
     alert("Enter a valid budget");
@@ -21,22 +23,26 @@ function addbuget() {
 var netexp = 0;
 var bal;
 function addexpense() {
-  var info = document.getElementById("expinfo").value;
-  var exp = document.getElementById("expamt").value;
-  netexp = netexp - -1 * exp;
-  document.getElementById("upexp").innerHTML = netexp;
-  document.getElementById("upexp").style.color = "red";
-  bal = bug - netexp;
-  if (bal >= 0) {
-    document.getElementById("upbal").innerHTML = bal;
-    document.getElementById("upbal").style.color = "green";
+   if (bl == true) {
+    var info = document.getElementById("expinfo").value;
+    var exp = document.getElementById("expamt").value;
+    netexp = netexp - -1 * exp;
+    document.getElementById("upexp").innerHTML = netexp;
+    document.getElementById("upexp").style.color = "red";
+    bal = bug - netexp;
+    if (bal >= 0) {
+      document.getElementById("upbal").innerHTML = bal;
+      document.getElementById("upbal").style.color = "green";
+    } else {
+      document.getElementById("upbal").innerHTML = bal;
+      document.getElementById("upbal").style.color = "red";
+    }
+    updaterestable(info, exp);
+    document.getElementById("expinfo").value = "";
+    document.getElementById("expamt").value = "";
   } else {
-    document.getElementById("upbal").innerHTML = bal;
-    document.getElementById("upbal").style.color = "red";
+    alert("Check if you have clicked on Add Budget");
   }
-  updaterestable(info, exp);
-  document.getElementById("expinfo").value = "";
-  document.getElementById("expamt").value = "";
 }
 function updaterestable(info, exp) {
   var tb = document.getElementById("netres");
