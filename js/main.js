@@ -89,3 +89,6 @@ function edit(ob) {
     document.getElementById("upbal").style.color = "red";
   }
 }
+window.onbeforeunload = function () {
+  return false;
+};
