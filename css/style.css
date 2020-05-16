@@ -34,7 +34,7 @@ label {
 #cont1,
 #cont2 {
   display: flex;
-  padding: 10px;
+  padding: 5px;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
