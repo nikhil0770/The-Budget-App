@@ -1,3 +1,8 @@
+body {
+  background-image: url("https://previews.123rf.com/images/luckywinner/luckywinner1902/luckywinner190200045/118102579-abstract-light-pink-and-blue-background-smooth-gradient-texture-color-colourful-background-vector-il.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 #cont1,
 #cont2 {
    margin-left: auto;
@@ -18,14 +23,14 @@ label {
   margin-right: 20px;
 }
 #addbug {
-  border: 2px solid green;
+  border: 2px solid darkgreen;
   width: 400px;
   padding: 10px;
   box-shadow: 1px 1px 7px green;
   margin-bottom: 10px;
 }
 #addexp {
-  border: 2px solid red;
+  border: 2px solid darkred;
   width: 400px;
   padding: 10px;
   box-shadow: 1px 1px 7px red;
