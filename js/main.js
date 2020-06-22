@@ -59,9 +59,9 @@ function updaterestable(info, exp) {
 }
 function dele(ob) {
   var f = ob.parentNode.parentNode;
-  var x = f.cells[1].innerHTML;
-  document.getElementById("upexp").innerHTML = netexp - x;
-  document.getElementById("upbal").innerHTML = bal - -1 * x;
+  var x = f.cells[1].value;
+  document.getElementById("upexp").value = netexp - x;
+  document.getElementById("upbal").value = bal - -1 * x;
   if (bal >= 0) {
     document.getElementById("upbal").style.color = "green";
   } else {
