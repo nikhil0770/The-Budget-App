@@ -57,7 +57,7 @@ function updaterestable(info, exp) {
   cell2.innerHTML = `<button id = 'edt'  class = "btn btn-primary";>Edit</button>`;
   cell3.innerHTML = `<button id = 'del'  class = "btn btn-danger";>Delete</button>`;
 }
-document.querySelector("#edt").addEventListener("click", edit);
+//document.querySelector("#edt").addEventListener("click", edit);
 document.querySelector("#del").addEventListener("click", dele);
 function dele(ob) {
   var f = ob.parentNode.parentNode;
