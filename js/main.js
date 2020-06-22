@@ -54,9 +54,11 @@ function updaterestable(info, exp) {
 
   cell0.innerHTML = info;
   cell1.innerHTML = exp;
-  cell2.innerHTML = `<button id = 'edt' onclick ="edit(this)" class = "btn btn-primary";>Edit</button>`;
-  cell3.innerHTML = `<button id = 'del' onclick ="dele(this)" class = "btn btn-danger";>Delete</button>`;
+  cell2.innerHTML = `<button id = 'edt'  class = "btn btn-primary";>Edit</button>`;
+  cell3.innerHTML = `<button id = 'del'  class = "btn btn-danger";>Delete</button>`;
 }
+document.querySelector("#edt").addEventListener("click", edit);
+document.querySelector("#del").addEventListener("click", dele);
 function dele(ob) {
   var f = ob.parentNode.parentNode;
   var x = f.cells[1].value;
