@@ -62,6 +62,8 @@ document.querySelector("#del").addEventListener("click", dele);
 function dele(ob) {
   var f = ob.parentNode.parentNode;
   var x = f.cells[1].value;
+  netexp = netexp - x;
+  bal = bal - -1 * x;
   document.getElementById("upexp").value = netexp - x;
   document.getElementById("upbal").value = bal - -1 * x;
   if (bal >= 0) {
