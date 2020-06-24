@@ -1,10 +1,13 @@
 document.querySelector("#addb").addEventListener("click", addbuget);
 document.querySelector("#adde").addEventListener("click", addexpense);
 var bug;
+var netexp = 0;
+var bal;
 var bl = false;
 function addbuget() {
   bl = true;
   bug = document.getElementById("budget").value;
+
   if (bug == "") {
     alert("Enter a valid budget");
   } else {
@@ -20,10 +23,9 @@ function addbuget() {
     }
   }
 }
-var netexp = 0;
-var bal;
+
 function addexpense() {
-   if (bl == true) {
+  if (bl == true) {
     var info = document.getElementById("expinfo").value;
     var exp = document.getElementById("expamt").value;
     netexp = netexp - -1 * exp;
@@ -54,17 +56,14 @@ function updaterestable(info, exp) {
 
   cell0.innerHTML = info;
   cell1.innerHTML = exp;
- cell2.innerHTML = `<button id = 'edt' onclick ="edit(this)" class = "btn btn-primary";>Edit</button>`;
+  cell2.innerHTML = `<button id = 'edt' onclick ="edit(this)" class = "btn btn-primary";>Edit</button>`;
   cell3.innerHTML = `<button id = 'del' onclick ="dele(this)" class = "btn btn-danger";>Delete</button>`;
 }
-
 function dele(ob) {
   var f = ob.parentNode.parentNode;
-  var x = f.cells[1].value;
-  netexp = netexp - x;
-  bal = bal - -1 * x;
-  document.getElementById("upexp").value = netexp - x;
-  document.getElementById("upbal").value = bal - -1 * x;
+  var x = f.cells[1].innerHTML;
+  document.getElementById("upexp").innerHTML = netexp - x;
+  document.getElementById("upbal").innerHTML = bal - -1 * x;
   if (bal >= 0) {
     document.getElementById("upbal").style.color = "green";
   } else {
