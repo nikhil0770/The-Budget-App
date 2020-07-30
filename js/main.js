@@ -64,7 +64,7 @@ function dele(ob) {
   var x = f.cells[1].innerHTML;
   netexp =  netexp - x;
   document.getElementById("upexp").innerHTML = netexp;
-  bal = bal - -1 * x
+  bal = bal -(-x);
   document.getElementById("upbal").innerHTML = bal;
   if (bal >= 0) {
     document.getElementById("upbal").style.color = "green";
