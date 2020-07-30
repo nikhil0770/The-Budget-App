@@ -62,8 +62,10 @@ function updaterestable(info, exp) {
 function dele(ob) {
   var f = ob.parentNode.parentNode;
   var x = f.cells[1].innerHTML;
-  document.getElementById("upexp").innerHTML = netexp - x;
-  document.getElementById("upbal").innerHTML = bal - -1 * x;
+  netexp =  netexp - x;
+  document.getElementById("upexp").innerHTML = netexp;
+  bal = bal - -1 * x
+  document.getElementById("upbal").innerHTML = bal;
   if (bal >= 0) {
     document.getElementById("upbal").style.color = "green";
   } else {
@@ -81,12 +83,12 @@ function edit(ob) {
   f.cells[0].innerHTML = xin;
   f.cells[1].innerHTML = xexp;
   if (earamt >= xexp) {
-    netexp = netexp - 1 * (earamt - xexp);
-    bal = bal - (earamt - xexp);
+    netexp = netexp - (earamt - xexp);
+    bal = bal + (earamt - xexp);
     document.getElementById("upexp").innerHTML = netexp;
     document.getElementById("upbal").innerHTML = bal;
   } else {
-    bal = bal - -1 * (earamt - xexp);
+    bal = bal - (xexp - earamt);
     netexp = netexp - (earamt - xexp);
     document.getElementById("upexp").innerHTML = netexp;
     document.getElementById("upbal").innerHTML = bal;
