@@ -46,13 +46,14 @@ function addexpense() {
     alert("Check if you have clicked on Add Budget");
   }
 }
+var cell2,cell3;
 function updaterestable(info, exp) {
   var tb = document.getElementById("netres");
   var newrow = tb.insertRow(tb.length);
   var cell0 = newrow.insertCell(0);
   var cell1 = newrow.insertCell(1);
-  var cell2 = newrow.insertCell(2);
-  var cell3 = newrow.insertCell(3);
+  cell2 = newrow.insertCell(2);
+  cell3 = newrow.insertCell(3);
 
   cell0.innerHTML = info;
   cell1.innerHTML = exp;
