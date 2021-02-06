@@ -40,7 +40,7 @@ label {
   padding: 5px;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #updatetable {
   margin-left: auto;
