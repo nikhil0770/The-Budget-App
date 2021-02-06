@@ -5,9 +5,7 @@
 } */
 #cont1,
 #cont2 {
-   margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
+   margin: 40px auto;
 }
 label {
   font-weight: bold;
